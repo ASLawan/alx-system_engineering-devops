@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# print given string 10 times and 'Hi' on the 9th iteration
+
+i=1
+str="Best School"
+while [[ $i -le 10 ]];
+do
+	echo "$str"
+	if [[ $i -eq 9  ]];
+	then
+		echo "Hi"
+	fi
+	i=$((i + 1))
+done
