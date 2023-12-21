@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#bash script that prints given string 10 times using until loop
+
+i=1
+str="Best School"
+
+until [[ $i -gt 10 ]];
+do
+	echo "$str"
+	i=$((i + 1))
+done
