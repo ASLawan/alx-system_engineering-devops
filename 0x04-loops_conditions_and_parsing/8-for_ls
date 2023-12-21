@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#script that prints file from current directory
+
+for file in *;
+do
+	if [[ $file != .* ]];
+	then
+		name=${file#*-}
+		echo "$name"
+	fi
+done
