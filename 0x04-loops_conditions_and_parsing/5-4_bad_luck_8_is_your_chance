@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# prints Best School 10 times but prints different at the 4th and 8th
+#+ iterations
+
+i=1
+str="Best School"
+while [[ $i -le 10 ]];
+do
+	if [[ $i -eq 4 ]];
+	then
+		echo "bad luck"
+	elif [[ $i -eq 8 ]];
+	then
+		echo "good luck"
+	else
+		echo "$str"
+	fi
+	i=$((i + 1))
+done
