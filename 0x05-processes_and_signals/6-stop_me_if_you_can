@@ -5,7 +5,7 @@ p_pid=$(pgrep -f "4-to_infinity_and_beyond")
 
 if [[ -n "$p_pid" ]];
 then
-	kill "$p_pid"
+	kill -15 "$p_pid"
 else
 	echo "Process not found!"
 fi
