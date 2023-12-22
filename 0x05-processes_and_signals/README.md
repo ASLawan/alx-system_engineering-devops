@@ -37,5 +37,5 @@ command
 Bash script that displays given string indefinitely. Observes a 2   
 second sleep and handles SIGTERM signal.
 
-### Beheaded process
+### Task 8: Beheaded process
 Bash script that kills the process in task 7
