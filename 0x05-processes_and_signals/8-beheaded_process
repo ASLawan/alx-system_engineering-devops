@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Script that finds and stops running process 
+
+p_pid=$(pgrep -f "7-highlander")
+
+if [[ -n "$p_pid" ]];
+then
+	kill -9 "$p_pid"
+else
+	echo "Process not found!"
+fi
