@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# script that displays all listening ports
+
+netstat -lp
