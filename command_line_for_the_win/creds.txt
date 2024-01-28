@@ -1,0 +1,9 @@
+Host: 77f68284be2b.3e24de83.alx-cod.online
+User: 77f68284be2b
+Pass: 14cbb16f64253d78888a
+
+login: 77f68284be2b@77f68284be2b.3e24de83.alx-cod.online
+
+ssh: ssh 77f68284be2b@77f68284be2b.3e24de83.alx-cod.online
+
+sftp: sftp 77f68284be2b@77f68284be2b.3e24de83.alx-cod.online
