@@ -8,3 +8,9 @@ exec { 'install_flask':
   path    => ['/usr/bin'],
   require => Package['python3-pip'],
 }
+
+exec { 'install_werkzeug':
+  command => '/usr/bin/pip3 install Werkzeug==2.1.1',
+  path    => ['/usr/bin'],
+  require => Package['python3-pip'],
+}
