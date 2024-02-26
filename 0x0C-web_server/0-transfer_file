@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# bash script to transfer file from client to server
+
+SCP_OPTIONS="-o StrictHostKeyChecking=no"
+if [ "$#" -lt 3 ];
+then
+	echo "Usage: $0 PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
+elif [ "$#" -eq 3 ];
+then
+	FILE_PATH="$1"
+	SERVER_IP="$2"
+	USERNAME="$3"
+	scp "$SCP_OPTIONS" "$FILE_PATH" "$USERNAME@$SERVER_IP:~/"
+else
+	FILE_PATH="$1"
+	SERVER_IP="$2"
+	USERNAME="$3"
+	SSH_KEYS="$4"
+	scp "$SCP_OPTIONS" -i "$SSH_KEYS" "$FILE_PATH" "$USERNAME@$SERVER_IP:~/"
+fi
