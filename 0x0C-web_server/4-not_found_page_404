@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# script to install nginx web server
+
+apt-get -y update
+apt-get install -y nginx
+
+echo "Hello World!" > /var/www/html/index.html
+echo "Ceci n'est pas une page" > /var/www/html/not_found.html
+sed -i "s/server_name _;/server_name _;\n\trewrite ^\/redirect_me https:\/\/github.com\/ASLawan permanent;\n\terror_page 404 /var/www/html/not_found.html;/" /etc/nginx/sites-available/default
+/etc/init.d/nginx restart
+
