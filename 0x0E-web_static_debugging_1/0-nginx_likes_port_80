@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Script to automate bug fix in a server - connection refused
+
+allowed_ips=$(ip addr show | grep -E '^inet ' | awk '{print $2}')
+
+echo "server {" >> /etc/nginx/nginx.conf
+echo "	listen 80;" >> /etc/nginx/nginx.conf
+
+for ip in $allowed_ips;
+do
+	echo "	server_name $ip;" >> /etc/nginx/nginx.conf
+done
+echo "}" >> /etc/nginx/nginx.conf
+service nginx restart
+
