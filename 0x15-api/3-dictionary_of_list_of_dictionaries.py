@@ -37,7 +37,7 @@ def convert_to_json_all_employees():
 
     filename = "todo_all_employees.json"
     with open(filename, mode='w') as file:
-        json.dump(tasks_by_user, file, separators=(',', ':'))
+        json.dump(tasks_by_user, file, separators=(', ', ': '))
 
     # print("Data exported to {}".format(filename))
 
