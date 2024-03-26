@@ -34,7 +34,7 @@ def convert_to_json(employee_id):
 
     filename = "{}.json".format(employee_id)
     with open(filename, mode='w') as file:
-        json.dump(json_data, file, separators=(',', ':'))
+        json.dump(json_data, file, separators=(', ', ': '))
 
     print("Data exported to {}".format(filename))
 
