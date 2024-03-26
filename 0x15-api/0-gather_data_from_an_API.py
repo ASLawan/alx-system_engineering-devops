@@ -19,18 +19,17 @@ def get_employee_todo_progress(employee_id):
         print(f"Error fetching employee info")
         return
     user_data = user_res.json()
-    employee_name = user_data['name']
+    employee_name = user_data['username']
 
     todo_res = requests.get(todo_url, params={'userId': employee_id})
     if todo_res.status_code != 200:
         print(f"Error fetching TODO list")
         return
     todo_data = todo_res.json()
-    total_tasks = len(todo_data)
-    completed_tasks = sum(1 for task in todo_data if task['completed'])
-
-    print(f"Employee {employee_name} is done with tasks\
-            ({completed_tasks}/{total_tasks})")
+    ttl = len(todo_data)
+    cpltd = sum(1 for task in todo_data if task['completed'])
+    
+    print(f"Employee {employee_name} is done with tasks({cpltd}/{ttl})")
     for task in todo_data:
         if task['completed']:
             print(f"\t{task['title']}")
