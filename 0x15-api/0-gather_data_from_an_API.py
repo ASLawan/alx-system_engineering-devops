@@ -19,7 +19,7 @@ def get_employee_todo_progress(employee_id):
         print(f"Error fetching employee info")
         return
     user_data = user_res.json()
-    employee_name = user_data['username']
+    employee_name = user_data['name']
 
     todo_res = requests.get(todo_url, params={'userId': employee_id})
     if todo_res.status_code != 200:
