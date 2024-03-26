@@ -29,7 +29,7 @@ def convert_to_json_all_employees():
 
         tasks_by_user[user_id].append({
                 "username": next(
-                    user['name'] for user in users_data if user['id']
+                    user['username'] for user in users_data if user['id']
                     == user_id),
                 "task": todo['title'],
                 "completed": todo['completed']
