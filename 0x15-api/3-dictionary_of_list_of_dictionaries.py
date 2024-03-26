@@ -39,7 +39,7 @@ def convert_to_json_all_employees():
     with open(filename, mode='w') as file:
         json.dump(tasks_by_user, file, separators=(',', ':'))
 
-    print("Data exported to {}".format(filename))
+    # print("Data exported to {}".format(filename))
 
 
 if __name__ == "__main__":
