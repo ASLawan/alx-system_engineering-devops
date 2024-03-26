@@ -25,7 +25,7 @@ def convert_to_csv(employee_id):
     with open(filename, mode='w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file, quoting=csv.QUOTE_ALL)
         for todo in todo_data:
-            writer.writerow([user_data['id'], user_data['name'],
+            writer.writerow([user_data['id'], user_data['username'],
                             todo['completed'], todo['title']])
 
     print("Data exported to {}".format(filename))
