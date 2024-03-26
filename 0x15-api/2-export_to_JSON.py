@@ -26,7 +26,7 @@ def convert_to_json(employee_id):
                 {
                     "task": todo['title'],
                     "completed": todo['completed'],
-                    "username": user_data['name']
+                    "username": user_data['username']
                 }
                 for todo in todo_data
             ]
