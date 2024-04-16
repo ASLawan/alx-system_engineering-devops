@@ -10,4 +10,8 @@ Intallation and configuration of appliction server.
 
 ### Task 1: Setup production with Gunicorn
 - Install gunicorn
-- Serve content as above but with gunicorn 
+- Serve content as above but with gunicorn
+
+### Task 2: Serve a page with Nginx 
+- Configured nginx serve page with above-mentions route
+- Nginx proxy requests listening on port 5000
