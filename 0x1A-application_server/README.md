@@ -18,4 +18,9 @@ Intallation and configuration of appliction server.
 
 ### Task 3: Add a route with query parameters
 - Added more configuraation to ngxin config file  
-- Add a route with query parameters  
+- Add a route with query parameters 
+
+### Task 4: Let's do this for your API
+- Cloned a new repo
+- Setup nginx with a new /api/ route pointing to a gunicorn instance on port 5002  
+
